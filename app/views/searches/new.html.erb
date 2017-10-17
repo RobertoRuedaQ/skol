@@ -1,0 +1,35 @@
+<h1>Busca colegio</h1>
+
+<%= form_for :search do |f| %>
+	<div class="field">
+		<%= f.label :state %>
+		<%= f.select :state, ["ANTIOQUIA","ATLANTICO", "BOGOTA D.C.", "BOLIVAR", "SANTANDER", "VALLE DEL CAUCA"] %>
+	</div>
+	<div class="field">
+		<%= f.label :city %>
+		<%= f.select :city, ['BOGOTA D.C.', 'BARRANQUILLA', 'MEDELLIN', 'CALI', 'BUCARAMANGA', 'CARTAGENA'] %>
+	</div>
+	<div class="field">
+		<%= f.label :gender %>
+		<%= f.select :gender, ['MASCULINO', 'FEMENINO', 'MIXTO'] %>
+	</div>
+	<div class="field">
+		<%= f.label :levels %>
+		<%= f.select :levels, ['PREESCOLAR', 'PRIMARIA', 'SECUNDARIA', 'MEDIA'] %>
+	</div>
+ 	<div class="field">
+		<%= f.label :languages %>
+		<%= f.select :languages, ['INGLES', 'FRANCES'] %>
+	</div>
+ 	<div class="field">
+		<%= f.label :owner %>
+		<%= f.select :owner, ['PERSONA NATURAL', 'COMUNIDAD RELIGIOSA', 'FUNDACION'] %>
+	</div>
+ 	<div class="field">
+		<%= f.label :cycle %>
+		<%= f.select :cycle, ['A', 'B', 'OTRO'] %>
+	</div>
+ 	<div class="field">
+		<%= f.submit %>
+	</div>
+<%end %>
