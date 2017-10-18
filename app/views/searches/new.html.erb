@@ -1,33 +1,33 @@
 <h1>Busca colegio</h1>
 
-<%= form_for :search do |f| %>
+<%= form_for @search do |f| %>
 	<div class="field">
 		<%= f.label :state %>
-		<%= f.select :state, ["ANTIOQUIA","ATLANTICO", "BOGOTA D.C.", "BOLIVAR", "SANTANDER", "VALLE DEL CAUCA"] %>
+		<%= f.select :state, ["ANTIOQUIA","ATLANTICO", "BOGOTA D.C.", "BOLIVAR", "SANTANDER", "VALLE DEL CAUCA"],include_blank: true %>
 	</div>
 	<div class="field">
 		<%= f.label :city %>
-		<%= f.select :city, ['BOGOTA D.C.', 'BARRANQUILLA', 'MEDELLIN', 'CALI', 'BUCARAMANGA', 'CARTAGENA'] %>
+		<%= f.select :city, ['BOGOTA D.C.', 'BARRANQUILLA', 'MEDELLIN', 'CALI', 'BUCARAMANGA', 'CARTAGENA'],include_blank: true %>
 	</div>
 	<div class="field">
 		<%= f.label :gender %>
-		<%= f.select :gender, ['MASCULINO', 'FEMENINO', 'MIXTO'] %>
+		<%= f.select :gender, ['MASCULINO', 'FEMENINO', 'MIXTO'],include_blank: true %>
 	</div>
 	<div class="field">
 		<%= f.label :levels %>
-		<%= f.select :levels, ['PREESCOLAR', 'PRIMARIA', 'SECUNDARIA', 'MEDIA'] %>
+		<%= f.select :levels, ['PREESCOLAR', 'PRIMARIA', 'SECUNDARIA', 'MEDIA'],include_blank: true %>
 	</div>
  	<div class="field">
 		<%= f.label :languages %>
-		<%= f.select :languages, ['INGLES', 'FRANCES'] %>
+		<%= f.select :languages, ['INGLES', 'FRANCES'],include_blank: true %>
 	</div>
  	<div class="field">
 		<%= f.label :owner %>
-		<%= f.select :owner, ['PERSONA NATURAL', 'COMUNIDAD RELIGIOSA', 'FUNDACION'] %>
+		<%= f.select :owner, ['PERSONA NATURAL', 'COMUNIDAD RELIGIOSA', 'FUNDACION'],include_blank: true %>
 	</div>
  	<div class="field">
 		<%= f.label :cycle %>
-		<%= f.select :cycle, ['A', 'B', 'OTRO'] %>
+		<%= f.select :cycle, ['A', 'B', 'OTRO'],include_blank: true %>
 	</div>
  	<div class="field">
 		<%= f.submit %>
