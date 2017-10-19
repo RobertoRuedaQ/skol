@@ -2,10 +2,6 @@
 
 <%= form_for @search do |f| %>
 	<div class="field">
-		<%= f.label :state, t("Departamento") %>
-		<%= f.select :state, ["ANTIOQUIA","ATLANTICO", "BOGOTA D.C.", "BOLIVAR", "SANTANDER", "VALLE DEL CAUCA"],include_blank: true %>
-	</div>
-	<div class="field">
 		<%= f.label :city, t("Ciudad") %>
 		<%= f.select :city, ['BOGOTA D.C.', 'BARRANQUILLA', 'MEDELLIN', 'CALI', 'BUCARAMANGA', 'CARTAGENA'],include_blank: true %>
 	</div>
