@@ -1,12 +1,8 @@
 <h1>Colegios</h1>
-
-<%if @search_schools.empty?%>
-	<p>No hemos podido encontrar un colegio con esas caracteristicas</p>
-<%else%>
-	<% @search.search_schools.each do |e|%>
-		<div class="container">
-			<p><%=e.school_name%></p>
-			<p><%=e.address%></p>	
-		</div>
-	<%end%>
+<% @search.schools.each do |e|%>
+	<div class="container">
+		<p><%=e.school_name%></p>
+		<p><%=e.address%></p>	
+	</div>
 <%end%>
+
