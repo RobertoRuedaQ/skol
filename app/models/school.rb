@@ -11,6 +11,6 @@ class School < ApplicationRecord
 	end
 
 	def coords
-		"{lat:""#{latitude}, ""lng:""#{longitude}}"
+		("lat:""#{latitude}, ""lng:""#{longitude}")
 	end
 end
